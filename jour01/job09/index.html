@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tri de Nombres</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Tri de Nombres</h1>
+  <form id="tri-form">
+    <label for="numbers">Nombres:</label>
+    <input type="text" id="numbers" name="numbers" value="5,2,8,1,4" required>
+    <br>
+    <label for="order">Ordre:</label>
+    <select id="order" name="order">
+      <option value="asc" selected>Ascendant</option>
+      <option value="desc">Descendant</option>
+    </select>
+    <br>
+    <button type="submit">Trier</button>
+  </form>
+  <div id="result"></div>
+</body>
+</html>
