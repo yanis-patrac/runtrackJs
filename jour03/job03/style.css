@@ -1,0 +1,28 @@
+/* Styles pour le plateau de jeu */
+#game-board {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* Styles pour chaque carreau */
+.tile {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour l'image dans chaque carreau */
+.tile img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Style pour le bouton "Recommencer" */
+#restart-btn {
+    margin-top: 20px;
+}
