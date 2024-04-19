@@ -1,7 +1,18 @@
-// Ajout d'un écouteur d'événement pour détecter le scrolling de la page
-window.addEventListener("scroll", function() {
-  // Calcul du pourcentage de scrolling
-  var scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-  // Mise à jour de la couleur du footer en fonction du pourcentage de scrolling
-  document.querySelector("footer").style.backgroundColor = `hsl(${scrollPercent}, 50%, 50%)`;
-});
+// Code Konami: Haut, Haut, Bas, Bas, Gauche, Droite, Gauche, Droite, B, A
+const codeKonami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+let konamiIndex = 0;
+
+function checkKonami(e) {
+    if (e.code === codeKonami[konamiIndex]) {
+        konamiIndex++;
+        if (konamiIndex === codeKonami.length) {
+            // Le code Konami a été entré avec succès!
+            document.body.classList.add('plateforme-styled'); // Ajoutez une classe CSS pour styliser la page
+            konamiIndex = 0; // Réinitialisez l'index pour la prochaine utilisation
+        }
+    } else {
+        konamiIndex = 0; // Réinitialisez l'index si la touche pressée ne correspond pas au code Konami
+    }
+}
+
+document.addEventListener('keydown', checkKonami);

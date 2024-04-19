@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Inscription</h1>
+    </header>
+    <main>
+        <form id="inscriptionForm">
+            <div class="form-group">
+                <label for="firstName">Prénom</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" aria-describedby="firstNameHelp" required autocomplete="given-name">
+                <small id="firstNameHelp" class="form-text text-muted">La taille de votre prénom doit être d'au moins 2 caractères.</small>
+                <small id="firstNameError" class="form-text text-muted error-message"></small>
+                <div class="invalid-feedback">Le prénom doit avoir au moins 2 caractères.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required autocomplete="email">
+                <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec qui que ce soit.</small>
+                <small id="emailError" class="form-text text-muted error-message"></small>
+                <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?\":{}|<>]).{8,}" required autocomplete="new-password">
+                <small id="passwordHelp" class="form-text text-muted">Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.</small>
+                <small id="passwordError" class="form-text text-muted error-message"></small>
+                <div class="invalid-feedback">Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.</div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required autocomplete="new-password">
+                <small id="confirmPasswordError" class="form-text text-muted error-message"></small>
+                <div class="invalid-feedback">Les mots de passe ne correspondent pas.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </form>
+        <div id="loginForm" style="display: none;">
+            <h2>Connexion</h2>
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required autocomplete="email">
+            <label for="loginPassword">Mot de passe</label>
+            <input type="password" id="loginPassword" required autocomplete="current-password">
+            <button onclick="login()">Se connecter</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mon Site</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

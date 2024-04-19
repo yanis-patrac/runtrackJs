@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3897f0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+/* Afficher les messages d'erreur seulement en cas d'erreur */
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.25rem;
+}
+
+/* Afficher les messages d'erreur correspondants aux champs invalides */
+.is-invalid + .error-message {
+    display: block;
+}
+
+.invalid-feedback {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.25rem;
+}
+
+.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+/* Styles pour le formulaire de connexion */
+#loginForm {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#loginForm h2 {
+    margin-top: 0;
+}
